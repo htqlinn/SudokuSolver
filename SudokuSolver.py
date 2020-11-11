@@ -35,8 +35,6 @@ def isValid(board, x, y, guess):
     else:
         return True
 
-    
-
 
 
 def solve(board):
