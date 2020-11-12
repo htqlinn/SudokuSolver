@@ -1,5 +1,31 @@
 #sudokuSolver
 
+board = [
+    [7,8,0,4,0,0,1,2,0],
+    [6,0,0,0,7,5,0,0,9],
+    [0,0,0,6,0,1,0,7,8],
+    [0,0,7,0,4,0,2,6,0],
+    [0,0,1,0,5,0,9,3,0],
+    [9,0,4,0,6,0,0,0,5],
+    [0,7,0,3,0,0,0,1,2],
+    [1,2,0,0,0,7,4,0,0],
+    [0,4,9,2,0,6,0,0,7]
+]
+
+def printBoard(board):
+    for i in range(9):
+        if i % 3 == 0 and i != 0:
+            print("- - - - - - - - - - - - - ")
+
+        for j in range(9):
+            if j % 3 == 0 and j != 0:
+                print(" | ", end='')
+
+            if j == 8:
+                print(board[i][j])
+            else:
+                print(str(board[i][j]) + " ", end='')
+
 
 def findEmpty(board): 
 
@@ -51,10 +77,11 @@ def solve(board):
 
     return False
 
-
+solve(board)
+printBoard(board)
 
 # if __name__ == '__main__':
-#     example_board = [
+#     board = [
 #         [7,8,0,4,0,0,1,2,0],
 #         [6,0,0,0,7,5,0,0,9],
 #         [0,0,0,6,0,1,0,7,8],
@@ -65,5 +92,3 @@ def solve(board):
 #         [1,2,0,0,0,7,4,0,0],
 #         [0,4,9,2,0,6,0,0,7]
 #     ]
-#     print(solve(example_board))
-#     print(example_board)
